@@ -19,7 +19,7 @@ export default function TabLayout() {
         options={{
           title: 'HaBits',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'id-card' : 'id-card-outline'} color={color} />
+            <TabBarIcon name={focused ? 'heart' : 'heart-outline'} color={color} />
           ),
         }}
       />
