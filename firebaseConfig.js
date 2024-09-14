@@ -6,7 +6,7 @@ import { getDatabase } from "firebase/database";
 
 // Your Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCddpH0KdhLpetHrHhIRa8a3zzDO09PHZE",
+  apiKey: "AIzaSyCZg9-y206Yz3nvFyz_--27NZeFBcoT4uA",
   // authDomain: "YOUR_AUTH_DOMAIN",
   projectId: "habit-master-3be66",
   // storageBucket: "habit-master-3be66.appspot.com",

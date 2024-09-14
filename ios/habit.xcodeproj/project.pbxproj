@@ -14,12 +14,12 @@
 		28F3D6D0BD604D5589037C69 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31018191491B43D385D66626 /* noop-file.swift */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
 		96905EF65AED1B983A6B3ABC /* libPods-habit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-habit.a */; };
-		A71823382C95D79B00D148C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A71823372C95D79B00D148C7 /* GoogleService-Info.plist */; };
 		A718233B2C95DA4500D148C7 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = A718233A2C95DA4500D148C7 /* FirebaseAppCheck */; };
 		A718233D2C95DA4500D148C7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A718233C2C95DA4500D148C7 /* FirebaseAuth */; };
 		A718233F2C95DA4500D148C7 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = A718233E2C95DA4500D148C7 /* FirebaseDatabase */; };
 		A71823412C95DA4500D148C7 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = A71823402C95DA4500D148C7 /* FirebaseMessaging */; };
 		A71823432C95DA4500D148C7 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A71823422C95DA4500D148C7 /* FirebaseStorage */; };
+		A71823452C961FA800D148C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A71823442C961FA800D148C7 /* GoogleService-Info.plist */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
 /* End PBXBuildFile section */
@@ -37,7 +37,7 @@
 		74650E0E7C5F4BFC87B2BD40 /* habit-Bridging-Header.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "habit-Bridging-Header.h"; path = "habit/habit-Bridging-Header.h"; sourceTree = "<group>"; };
 		7A4D352CD337FB3A3BF06240 /* Pods-habit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-habit.release.xcconfig"; path = "Target Support Files/Pods-habit/Pods-habit.release.xcconfig"; sourceTree = "<group>"; };
 		89B5D2F59263A59DC8ADED24 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = habit/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		A71823372C95D79B00D148C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A71823442C961FA800D148C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = habit/SplashScreen.storyboard; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -64,7 +64,7 @@
 		13B07FAE1A68108700A75B9A /* habit */ = {
 			isa = PBXGroup;
 			children = (
-				A71823372C95D79B00D148C7 /* GoogleService-Info.plist */,
+				A71823442C961FA800D148C7 /* GoogleService-Info.plist */,
 				BB2F792B24A3F905000567C9 /* Supporting */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
@@ -225,7 +225,7 @@
 			files = (
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				A71823382C95D79B00D148C7 /* GoogleService-Info.plist in Resources */,
+				A71823452C961FA800D148C7 /* GoogleService-Info.plist in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
 				0FC96DEE17BE14271D908119 /* PrivacyInfo.xcprivacy in Resources */,
 			);
