@@ -10,7 +10,7 @@ const Factor: React.FC<{ text: string, metric: number, backgroundColor?: string 
       <Text style={styles.text}>{text}</Text>
       <View style={styles.metrics}>
         <Text style={styles.metric}>{metric} {findUnit(text)}</Text>
-        <Text style={styles.metric}>{calculateHaBits(text, metric) + ' haBits'}</Text>
+        <Text style={styles.metric}>{calculateBits(text, metric) + ' bits'}</Text>
       </View>
     </View>
   );
@@ -29,7 +29,7 @@ const findUnit = (text: string) => {
   }
 }
 
-const calculateHaBits = (text: string, metric: number) => {
+const calculateBits = (text: string, metric: number) => {
   switch (text) {
     case 'Steps':
       return metric / 50;

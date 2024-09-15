@@ -25,7 +25,7 @@ const Friend: React.FC<{ name: string, pictureNumber: number }> = ({
 
 const styles = StyleSheet.create({
   friendContainer: {
-    width: 130,
+    width: 150,
     height: 150,
     paddingHorizontal: 20,
     marginVertical: 10,
