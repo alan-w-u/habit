@@ -25,7 +25,7 @@ export default function Friends() {
         <Button title='Send' />
       </View>
       <View>
-        <FriendRequest name='Melanie' pictureNumber={3} />
+        <FriendRequest name='Jeffrey' pictureNumber={4} />
       </View>
       <View style={styles.friendContainer}>
         <Friend name='Kashish' pictureNumber={1} />
