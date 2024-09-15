@@ -7,11 +7,11 @@ interface RejectFriendButtonProps {
   onPress: () => void;
 }
 
-const RejectFriendIcon: React.FC<RejectFriendButtonProps> = ({onPress}) => {
+const RejectFriendIcon: React.FC<RejectFriendButtonProps> = ({ onPress }) => {
   return (
     <View>
       <TouchableOpacity onPress={onPress}>
-        <Icon name="times" size={30} color="grey" />
+        <Icon name="times" size={30} color="red" />
       </TouchableOpacity>
     </View>
   );

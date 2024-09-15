@@ -7,11 +7,11 @@ interface AddFriendButtonProps {
   onPress: () => void;
 }
 
-const AcceptFriendIcon: React.FC<AddFriendButtonProps> = ({onPress}) => {
+const AcceptFriendIcon: React.FC<AddFriendButtonProps> = ({ onPress }) => {
   return (
     <View>
       <TouchableOpacity onPress={onPress}>
-        <Icon name="check" size={30} color="grey" />
+        <Icon name="check" size={30} color="green" />
       </TouchableOpacity>
     </View>
   );
