@@ -12,7 +12,7 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { useState } from 'react';
 
-export default function HomeScreen() {
+export default function HaBits() {
   const props = {
     activeStrokeWidth: 25,
     inActiveStrokeWidth: 25,
@@ -29,7 +29,7 @@ export default function HomeScreen() {
         />
       }>
       <Text style={styles.title}>HaBits</Text>
-      <View style={styles.scoreContainer}>
+      <View style={styles.progressContainer}>
         {/* Biggest Ring */}
         <AnimatedCircularProgress // Steps
           size={220}
@@ -56,9 +56,10 @@ export default function HomeScreen() {
           style={styles.progressRing}
         />
         {/* Smallest Ring */}
-        <Text style={styles.haBits}>...</Text>
-        <Text style={styles.haBits}>haBits</Text>
+        {/* <Text style={styles.haBits}>PROFILE PICTURE</Text> */}
+        <Image source={require('@/assets/profile-pictures/pfp4.png')} style={{ width: 100, height: 100, margin: 0, borderRadius: 100 }} />
       </View>
+      <Text style={styles.haBits}>... haBits</Text>
       <Factor text="Steps" metric={100} backgroundColor="#ff758f" />
       <Factor text="Sleep" metric={100} backgroundColor="#c8b6ff" />
       <Factor text="Meditation" metric={100} backgroundColor="#57cc99" />
@@ -79,10 +80,9 @@ const styles = StyleSheet.create({
     width: 400,
     position: 'absolute',
   },
-  scoreContainer: {
+  progressContainer: {
     position: 'relative',
-    marginTop: 100,
-    marginBottom: 125,
+    marginVertical: 60,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -90,7 +90,8 @@ const styles = StyleSheet.create({
     position: 'absolute',
   },
   haBits: {
-    fontSize: 15,
+    fontSize: 25,
     fontWeight: 'bold',
+    marginHorizontal: 'auto'
   },
 });
