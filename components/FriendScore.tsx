@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native';
 
-const Factor: React.FC<{name: string, haBits: number, backgroundColor?: string}> = ({
+const FriendScore: React.FC<{name: string, haBits: number, backgroundColor?: string}> = ({
   name,
   haBits,
   backgroundColor = '#eeeeee',
@@ -35,4 +35,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Factor;
+export default FriendScore;

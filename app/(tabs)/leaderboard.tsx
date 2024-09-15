@@ -8,7 +8,7 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 
-export default function TabTwoScreen() {
+export default function Leaderboard() {
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
@@ -19,7 +19,7 @@ export default function TabTwoScreen() {
         />
       }>
       <Text style={styles.title}>Leaderboard</Text>
-      <FriendScore name='John' haBits={100}></FriendScore>
+      <FriendScore name='Jeffrey' haBits={100}></FriendScore>
     </ParallaxScrollView>
   );
 }
