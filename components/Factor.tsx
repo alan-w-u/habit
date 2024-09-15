@@ -1,27 +1,54 @@
 import { StyleSheet, Text, View } from 'react-native';
 
-const Factor: React.FC<{text: string, metric: string, backgroundColor?: string, textColor?: string}> = ({
+const Factor: React.FC<{ text: string, metric: number, backgroundColor?: string }> = ({
   text,
   metric,
-  backgroundColor = '#A9A9A9',
-  textColor = '#343a40'
+  backgroundColor = '#eeeeee',
 }) => {
   return (
-    <View style={[styles.box, { backgroundColor }]}>
-      <Text style={[styles.text, { color: textColor }]}>{text}</Text>
-      <Text style={[styles.metric, { color: textColor }]}>{metric}</Text>
+    <View style={[styles.progress, { backgroundColor }]}>
+      <Text style={styles.text}>{text}</Text>
+      <View style={styles.metrics}>
+        <Text style={styles.metric}>{metric} {findUnit(text)}</Text>
+        <Text style={styles.metric}>{calculateHaBits(text, metric) + ' haBits'}</Text>
+      </View>
     </View>
   );
 };
 
+const findUnit = (text: string) => {
+  switch (text) {
+    case 'Steps':
+      return 'steps';
+    case 'Sleep':
+      return "hours";
+    case 'Meditation':
+      return 'minutes';
+    default:
+      return "";
+  }
+}
+
+const calculateHaBits = (text: string, metric: number) => {
+  switch (text) {
+    case 'Steps':
+      return metric / 50;
+    case 'Sleep':
+      return metric * 1.25;
+    case 'Meditation':
+      return metric * 2;
+    default:
+      return 0;
+  }
+}
+
 const styles = StyleSheet.create({
-  box: {
+  progress: {
     display: 'flex',
     flexDirection: 'row',
     width: 300,
     height: 75,
     paddingHorizontal: 20,
-    // justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 10,
     marginHorizontal: 'auto'
@@ -29,10 +56,15 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 20,
     fontWeight: 'bold',
+    color: '#343a40',
+  },
+  metrics: {
+    marginLeft: 'auto'
   },
   metric: {
     fontSize: 18,
-    marginLeft: 'auto'
+    marginVertical: 3,
+    marginLeft: 'auto',
   }
 });
 

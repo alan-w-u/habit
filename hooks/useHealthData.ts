@@ -1,41 +1,45 @@
-import AppleHealthKit, {
-  HealthInputOptions,
-  HealthKitPermissions,
-  HealthUnit,
-} from "react-native-health";
-import { useState, useEffect} from 'react';
+// import AppleHealthKit, {
+//   HealthInputOptions,
+//   HealthKitPermissions,
+//   HealthUnit,
+// } from "react-native-health";
+// import { useState, useEffect} from 'react';
 
-const { Permissions } = AppleHealthKit.Constants;
+// const { Permissions } = AppleHealthKit.Constants;
 
-const permissions: HealthKitPermissions = {
-  permissions: {
-    read: [
-      Permissions.Steps,
-      Permissions.FlightsClimbed,
-      Permissions.DistanceWalkingRunning,
-    ],
-    write: [],
-  },
-};
+// const permissions: HealthKitPermissions = {
+//   permissions: {
+//     read: [
+//       Permissions.Steps,
+//       Permissions.FlightsClimbed,
+//       Permissions.DistanceWalkingRunning,
+//     ],
+//     write: [],
+//   },
+// };
 
-const useHealthData = (date: Date) => {
-  const [steps, setSteps] = useState(0);
-  const [flights, setFlights] = useState(0);
-  const [distance, setDistance] = useState(0);
+// const [steps, setSteps] = useState(0);
+// const [flights, setFlights] = useState(0);
+// const [distance, setDistance] = useState(0);
 
-  const [hasPermissions, setHasPermission] = useState(false);
+// const useHealthData = (date: Date) => {
+//   // const [steps, setSteps] = useState(0);
+//   // const [flights, setFlights] = useState(0);
+//   // const [distance, setDistance] = useState(0);
 
-  useEffect(() => {
-    AppleHealthKit.initHealthKit(permissions, (err) => {
-      if (err) {
-        console.log('Error getting permissions');
-        return;
-      }
-      setHasPermission(true);
-    });
-  }, []);
+//   const [hasPermissions, setHasPermission] = useState(false);
 
-  return { steps, flights, distance };
-};
+//   useEffect(() => {
+//     AppleHealthKit.initHealthKit(permissions, (err) => {
+//       if (err) {
+//         console.log('Error getting permissions');
+//         return;
+//       }
+//       setHasPermission(true);
+//     });
+//   }, []);
 
-export default useHealthData;
+//   return { steps, flights, distance };
+// };
+
+// export default useHealthData;

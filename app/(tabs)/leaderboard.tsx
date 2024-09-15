@@ -1,4 +1,6 @@
-import { StyleSheet, Image, Platform, View, Text, TextInput, Button } from 'react-native';
+import { StyleSheet, Image, Platform, Text } from 'react-native';
+
+import FriendScore from '@/components/FriendScore'
 
 import { Collapsible } from '@/components/Collapsible';
 import { ExternalLink } from '@/components/ExternalLink';
@@ -16,11 +18,8 @@ export default function TabTwoScreen() {
           style={styles.banner}
         />
       }>
-      <Text style={styles.title}>Friends</Text>
-      <View style={styles.searchContainer}>
-        <TextInput style={styles.searchbar} placeholder='email address' />
-        <Button title='Send' />
-      </View>
+      <Text style={styles.title}>Leaderboard</Text>
+      <FriendScore name='John' haBits={100}></FriendScore>
     </ParallaxScrollView>
   );
 }
@@ -43,19 +42,5 @@ const styles = StyleSheet.create({
     height: 200,
     width: 400,
     position: 'absolute',
-  },
-  searchContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center'
-  },
-  searchbar: {
-    width: 265,
-    fontSize: 20,
-    padding: 10,
-    marginRight: 'auto',
-    borderColor: '#eeeeee',
-    borderWidth: 5,
-    borderRadius: 10,
   },
 });

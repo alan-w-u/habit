@@ -12,7 +12,7 @@ export default function HomeScreen() {
       headerImage={
         <Image
           source={require('@/assets/images/cloud.png')}
-          style={styles.cloud}
+          style={styles.banner}
         />
       }>
       <ThemedView style={styles.titleContainer}>
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     gap: 8,
     marginBottom: 8,
   },
-  cloud: {
+  banner: {
     height: 200,
     width: 400,
     position: 'absolute',
