@@ -8,15 +8,16 @@ interface RegisterComponentProps {
 }
 
 const RegisterComponent: React.FC<RegisterComponentProps> = ({ onRegister }) => {
+  const [name, setName] = React.useState<string>('');
   const [email, setEmail] = React.useState<string>('');
   const [password, setPassword] = React.useState<string>('');
   const [error, setError] = useState<string | null>(null);
 
   const handleRegisterClick = async () => {
     try {
-      const user = await registerUser(email, password);
+      const user = await registerUser(name, email, password);
       console.log('Registered user:', user);
-      onRegister(); 
+      onRegister();
       // Additional actions on successful registration
     } catch (error) {
       setError('Registration failed');
@@ -26,6 +27,12 @@ const RegisterComponent: React.FC<RegisterComponentProps> = ({ onRegister }) => 
   return (
     <View style={styles.container}>
       <Text style={styles.header}>Register</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Name"
+        value={name}
+        onChangeText={setName}
+      />
       <TextInput
         style={styles.input}
         placeholder="Email"

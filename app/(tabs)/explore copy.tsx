@@ -1,5 +1,7 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { StyleSheet, Image, Platform, View, Modal, Button } from 'react-native';
+import { Text, StyleSheet, Image, Platform, View, Modal, Button } from 'react-native';
+// import { getFirestore, doc, getDoc } from 'firebase/firestore';
+// import { db } from '../../firebaseConfig';
 
 import { Collapsible } from '../../components/Collapsible';
 import { ExternalLink } from '../..//components/ExternalLink';
@@ -14,11 +16,35 @@ import React, { useState } from 'react';
 import { registerUser } from '../../newUser.js';
 import { auth } from '../../firebaseConfig.js';
 
+import AddFriendComponent from '../../components/AddFriendComponent';
+import AddFriendButton from '../../components/AddFriendButton';
+import PendingRequestBox from '@/components/PendingRequestBanner';
+import PendingRequestsScreen from "@/components/PendingRequestScreen";
+
 export default function TabTwoScreen() {
   const [isRegisterVisible, setIsRegisterVisible] = useState(false);
-
   const showRegisterComponent = () => setIsRegisterVisible(true);
   const hideRegisterComponent = () => setIsRegisterVisible(false);
+
+  const senderId = auth.currentUser?.uid;
+  const requestId = auth.currentUser?.uid;
+  // const requestId = "mNqCquSeWja20u2wUe3Ql02yrVG2";
+  // const senderId = "mNqCquSeWja20u2wUe3Ql02yrVG2";
+  // const userName = getUsername(senderId);
+
+  // async function getUsername(string: string) {
+  //   const userRef = doc(getFirestore(), 'users', senderId);
+  //   const userDoc = await getDoc(userRef);
+  //   if (userDoc.exists()) {
+  //     const userData = userDoc.data();
+  //     return userData.name;
+  //   }
+  // }
+
+
+  const handleFriendRequestSent = () => {
+    alert("Friend request sent successfully!");
+  };
 
   return (
     <ParallaxScrollView
@@ -45,7 +71,7 @@ export default function TabTwoScreen() {
           ),
         })}
       </Collapsible>
-      <Collapsible title="tester">
+      <Collapsible title="register tester">
         <View style={styles.titleContainer}>
           <RegisterButton onPress={showRegisterComponent} />
 
@@ -63,6 +89,24 @@ export default function TabTwoScreen() {
               </View>
             </View>
           </Modal>
+        </View>
+      </Collapsible>
+
+      <Collapsible title="add friend tester">
+        <View style={styles.titleContainer}>
+
+          {senderId ? (
+            <AddFriendComponent onAdd={handleFriendRequestSent} senderId={senderId} />
+          ) : (
+            <Text>"Please log in to send friend requests."</Text>
+          )}
+
+        </View>
+      </Collapsible>
+
+      <Collapsible title="Pending Friends Tester">
+        <View style={styles.titleContainer}>
+          <PendingRequestsScreen userId={requestId} />
         </View>
       </Collapsible>
 
