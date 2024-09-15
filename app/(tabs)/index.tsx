@@ -133,12 +133,12 @@ export default function HaBits() {
             <Image source={require('@/assets/profile-pictures/pfp4.png')} style={{ width: 100, height: 100, margin: 0, borderRadius: 100 }} />
           </View>
           <Text style={styles.bits}>... bits</Text>
-          <Factor text="Steps" metric={100} backgroundColor="#ff758f" />
-          <Factor text="Sleep" metric={100} backgroundColor="#c8b6ff" />
-          <Factor text="Meditation" metric={100} backgroundColor="#57cc99" />
+          <Factor text="Steps" metric={100} backgroundColor="#ff758f" goal={0} />
+          <Factor text="Sleep" metric={100} backgroundColor="#c8b6ff" goal={0} />
+          <Factor text="Meditation" metric={100} backgroundColor="#57cc99" goal={0} />
         </>
       }
-=======
+
       <View style={styles.progressContainer}>
         {/* Biggest Ring */}
         <AnimatedCircularProgress // Steps
@@ -270,14 +270,14 @@ const styles = StyleSheet.create({
   },
   row: {
     flexDirection: 'row',
-    justifyContent: 'space-around', // Distribute space evenly
-    alignItems: 'center', // Center items vertically
+    justifyContent: 'space-around',
+    alignItems: 'center',
     width: '100%',
   },
   image: {
-    width: 60, // Set desired width
-    height: 60, // Set desired height
-    borderRadius: 10, // Optional: add border radius
+    width: 60,
+    height: 60,
+    borderRadius: 10,
   },
   blank: {
     width: '200%',
