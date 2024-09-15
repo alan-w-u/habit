@@ -1,10 +1,10 @@
-import getPendingRequests from '@/PendingRequests';
+import getPendingRequests from '../PendingRequests';
 import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList } from 'react-native';
 import AcceptFriendIcon from './AcceptFriendButton';
 import RejectFriendIcon from './RejectFriendButton';
-import { acceptFriendRequest } from '@/friendRequests';
-import { rejectFriendRequest } from '@/friendRequests';
+import { acceptFriendRequest } from '../friendRequests';
+import { rejectFriendRequest } from '../friendRequests';
 
 interface Request {
   requestId: string;

@@ -26,10 +26,10 @@ export default function TabTwoScreen() {
   const showRegisterComponent = () => setIsRegisterVisible(true);
   const hideRegisterComponent = () => setIsRegisterVisible(false);
 
-  const senderId = auth.currentUser?.uid;
+  // const senderId = auth.currentUser?.uid;
   const requestId = auth.currentUser?.uid;
   // const requestId = "mNqCquSeWja20u2wUe3Ql02yrVG2";
-  // const senderId = "mNqCquSeWja20u2wUe3Ql02yrVG2";
+  const senderId = "LtGssQsMjPZgiB7zAKvlj0raeux1";
   // const userName = getUsername(senderId);
 
   // async function getUsername(string: string) {

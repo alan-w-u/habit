@@ -9,7 +9,17 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 
+import { auth } from '../../firebaseConfig.js';
+import AddFriendComponent from '../../components/AddFriendComponent';
+
 export default function Friends() {
+  const senderId = "LtGssQsMjPZgiB7zAKvlj0raeux1";
+  // const senderId = auth.currentUser?.uid;
+  const handleFriendRequestSent = () => {
+    alert("Friend request sent successfully!");
+  };
+
+
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
@@ -21,19 +31,25 @@ export default function Friends() {
       }>
       <Text style={styles.title}>Friends</Text>
       <View style={styles.searchContainer}>
-        <TextInput style={styles.searchbar} placeholder='email address' />
-        <Button title='Send' />
+        {/* <TextInput style={styles.searchbar} placeholder='email address' />
+        <Button title='Submit' /> */}
+        {senderId ? (
+          <AddFriendComponent onAdd={handleFriendRequestSent} senderId={senderId} />
+        ) : (
+          <Text>Please log in to send friend requests.</Text>
+        )}
       </View>
       <View>
-        <FriendRequest name='Melanie' pictureNumber={3} />
+        <FriendRequest name='Jeffrey' pictureNumber={4} senderId={''} />
       </View>
       <View style={styles.friendContainer}>
         <Friend name='Kashish' pictureNumber={1} />
         <Friend name='Donald' pictureNumber={3} />
-        <Friend name='Maylim' pictureNumber={5} />
-        <Friend name='Isaac' pictureNumber={2} />
-        <Friend name='Caitlyn' pictureNumber={6} />
+        <Friend name='Caitlyn' pictureNumber={5} />
+        <Friend name='Katherine' pictureNumber={2} />
+        <Friend name='Adrian' pictureNumber={6} />
       </View>
+
     </ParallaxScrollView>
   );
 }

@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 import { sendFriendRequest } from "../friendRequests.js"
-import { getDocs, collection, query, where, addDoc} from 'firebase/firestore';
-import { db } from '../firebaseConfig'; 
+import { getDocs, collection, query, where, addDoc } from 'firebase/firestore';
+import { db } from '../firebaseConfig';
 
 interface AddFriendComponentProps {
   onAdd: () => void;
@@ -36,7 +36,7 @@ const AddFriendComponent: React.FC<AddFriendComponentProps> = ({ onAdd, senderId
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Add Friend</Text>
+      <Text style={styles.header}>Add a Bit</Text>
       <TextInput
         style={styles.input}
         placeholder="Email"
@@ -52,7 +52,7 @@ const AddFriendComponent: React.FC<AddFriendComponentProps> = ({ onAdd, senderId
 async function getReceiverIdByEmail(email: string): Promise<string | null> {
   const q = query(collection(db, 'users'), where('email', '==', email));
   const querySnapshot = await getDocs(q);
-  
+
   if (querySnapshot.empty) {
     return null;
   } else {
@@ -63,19 +63,26 @@ async function getReceiverIdByEmail(email: string): Promise<string | null> {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 20,
+    padding: 30,
     width: '100%',
-    maxWidth: 400,
+    maxWidth: 300,
+    borderWidth: 3,
+    borderRadius: 10,
+    borderColor: '#eeeeee',
+
   },
   header: {
-    fontSize: 24,
+    fontSize: 15,
     marginBottom: 20,
+    textAlign: 'left',
+    marginVertical: -20,
   },
   input: {
     borderWidth: 1,
     borderColor: '#ccc',
     padding: 10,
     marginBottom: 10,
+    marginVertical: -16,
   },
   error: {
     color: 'red',
