@@ -1,16 +1,8 @@
-import { StyleSheet, Image, Platform, View, Text } from 'react-native';
-
-// import useHealthData from '@/hooks/useHealthData';
+import { StyleSheet, Image, View, Text } from 'react-native';
 
 import Factor from '@/components/Factor'
-
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
-
-import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
-import { useState } from 'react';
 
 export default function HaBits() {
   const props = {
@@ -34,7 +26,7 @@ export default function HaBits() {
         <AnimatedCircularProgress // Steps
           size={220}
           width={15}
-          fill={90}
+          fill={83}
           tintColor="#ff758f"
           backgroundColor="#ffd6dd"
           style={styles.progressRing}
@@ -42,7 +34,7 @@ export default function HaBits() {
         <AnimatedCircularProgress // Sleep
           size={180}
           width={15}
-          fill={80}
+          fill={100}
           tintColor="#c8b6ff"
           backgroundColor="#e9e2ff"
           style={styles.progressRing}
@@ -50,7 +42,7 @@ export default function HaBits() {
         <AnimatedCircularProgress // Meditation
           size={140}
           width={15}
-          fill={60}
+          fill={67}
           tintColor="#57cc99"
           backgroundColor="#cdf0e0"
           style={styles.progressRing}
@@ -58,10 +50,10 @@ export default function HaBits() {
         {/* Smallest Ring */}
         <Image source={require('@/assets/profile-pictures/pfp4.png')} style={{ width: 100, height: 100, margin: 0, borderRadius: 100 }} />
       </View>
-      <Text style={styles.bits}>... bits</Text>
-      <Factor text="Steps" metric={100} backgroundColor="#ff758f" />
-      <Factor text="Sleep" metric={100} backgroundColor="#c8b6ff" />
-      <Factor text="Meditation" metric={100} backgroundColor="#57cc99" />
+      <Text style={styles.bits}>592 / 722 bits</Text>
+      <Factor text="Steps" metric={5000} goal={6000} backgroundColor="#ff758f" />
+      <Factor text="Sleep" metric={8} goal={8} backgroundColor="#c8b6ff" />
+      <Factor text="Meditation" metric={10} goal={15} backgroundColor="#57cc99" />
     </ParallaxScrollView>
   );
 }
