@@ -30,9 +30,9 @@ export default function Friends() {
       <View style={styles.friendContainer}>
         <Friend name='Kashish' pictureNumber={1} />
         <Friend name='Donald' pictureNumber={3} />
-        <Friend name='Maylim' pictureNumber={5} />
-        <Friend name='Isaac' pictureNumber={2} />
-        <Friend name='Caitlyn' pictureNumber={6} />
+        <Friend name='Caitlyn' pictureNumber={5} />
+        <Friend name='Katherine' pictureNumber={2} />
+        <Friend name='Adrian' pictureNumber={6} />
       </View>
     </ParallaxScrollView>
   );
