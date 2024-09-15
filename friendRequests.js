@@ -1,4 +1,5 @@
 import { db } from "./firebaseConfig";
+import { addDoc, collection } from 'firebase/firestore';
 
 // Function to send a friend request
 export async function sendFriendRequest(senderId, receiverId) {

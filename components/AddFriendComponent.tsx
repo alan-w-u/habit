@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 import { sendFriendRequest } from "../friendRequests.js"
-import { getDocs, collection, query, where } from 'firebase/firestore';
+import { getDocs, collection, query, where, addDoc} from 'firebase/firestore';
 import { db } from '../firebaseConfig'; 
 
 interface AddFriendComponentProps {
