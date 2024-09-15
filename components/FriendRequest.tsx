@@ -4,7 +4,7 @@ import RejectFriendIcon from './RejectFriendButton';
 import { acceptFriendRequest } from '../friendRequests';
 import { rejectFriendRequest } from '../friendRequests';
 import { collection, doc, getDoc, getDocs, getFirestore, query, where } from 'firebase/firestore';
-import { auth, db } from '@/firebaseConfig';
+import { auth } from '@/firebaseConfig';
 import { useEffect, useState } from 'react';
 import React from 'react';
 
