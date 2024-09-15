@@ -19,7 +19,11 @@ export default function Leaderboard() {
         />
       }>
       <Text style={styles.title}>Leaderboard</Text>
-      <FriendScore name='Jeffrey' haBits={100}></FriendScore>
+      <FriendScore name='Jeffrey' bits={700} standing={1} />
+      <FriendScore name='Benji' bits={650} standing={2} />
+      <FriendScore name='Katherine' bits={450} standing={3} />
+      <FriendScore name='Adrian' bits={300} standing={4} />
+      <FriendScore name='Jae-Yoon' bits={100} standing={5} />
     </ParallaxScrollView>
   );
 }

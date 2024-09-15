@@ -56,10 +56,9 @@ export default function HaBits() {
           style={styles.progressRing}
         />
         {/* Smallest Ring */}
-        {/* <Text style={styles.haBits}>PROFILE PICTURE</Text> */}
         <Image source={require('@/assets/profile-pictures/pfp4.png')} style={{ width: 100, height: 100, margin: 0, borderRadius: 100 }} />
       </View>
-      <Text style={styles.haBits}>... haBits</Text>
+      <Text style={styles.bits}>... bits</Text>
       <Factor text="Steps" metric={100} backgroundColor="#ff758f" />
       <Factor text="Sleep" metric={100} backgroundColor="#c8b6ff" />
       <Factor text="Meditation" metric={100} backgroundColor="#57cc99" />
@@ -89,7 +88,7 @@ const styles = StyleSheet.create({
   progressRing: {
     position: 'absolute',
   },
-  haBits: {
+  bits: {
     fontSize: 25,
     fontWeight: 'bold',
     marginHorizontal: 'auto'

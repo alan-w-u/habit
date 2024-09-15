@@ -1,14 +1,23 @@
 import { StyleSheet, Text, View } from 'react-native';
 
-const FriendScore: React.FC<{name: string, haBits: number, backgroundColor?: string}> = ({
+const colourMap: { [key: string]: any } = {
+  1: '#ffd700', // Gold
+  2: '#c0c0c0', // Silver
+  3: '#cd7f32', // Bronze
+  4: '#eeeeee' // General
+};
+
+const FriendScore: React.FC<{ name: string, bits: number, standing: number }> = ({
   name,
-  haBits,
-  backgroundColor = '#eeeeee',
+  bits,
+  standing
 }) => {
+  const colour = colourMap[standing] || '#eeeeee';
+
   return (
-    <View style={[styles.scoreContainer, { backgroundColor }]}>
+    <View style={[styles.scoreContainer, { backgroundColor: colour }]}>
       <Text style={styles.text}>{name}</Text>
-      <Text style={styles.metric}>{haBits} haBits</Text>
+      <Text style={styles.metric}>{bits} bits</Text>
     </View>
   );
 };
